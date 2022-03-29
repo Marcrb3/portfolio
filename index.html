@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marc Roca
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: #141414;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: url("cursor.png"), auto;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .button:hover,
+        .button:focus {
+            outline: none;
+        }
+
+        .logo {
+            position: absolute;
+            color: #07D903;
+            float: left;
+            font-weight: bolder;
+            margin-top: 10px;
+            left: 25px;
+            height: 26px;
+            z-index: 100000
+        }
+
+        #home {
+            position: absolute;
+            color: #07D903;
+            float: right;
+            font-weight: bolder;
+            top: 10px;
+            right: 25px;
+            background-color: none;
+            border: none;
+            font-size: 23px;
+            cursor: url("cursor.png"), auto;
+            z-index: 100000
+        }
+
+        .menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            line-height: 40px;
+        }
+
+        #home:hover {
+            color: #F5F5F5;
+            cursor: url("cursor.png"), auto;
+        }
+
+        #projectes {
+            color: #F5F5F5;
+            font-size: 82px;
+            background: none;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #projectes:hover {
+            color: #07D903;
+            cursor: url("cursor.png"), auto;
+        }
+
+        #sobremi {
+            color: #F5F5F5;
+            font-size: 82px;
+            background: none;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #sobremi:hover {
+            color: #07D903;
+            cursor: url("cursor.png"), auto;
+        }
+
+        .carousel-control-prev {
+            cursor: url("cursor.png"), auto;
+            background: none;
+        }
+
+        .carousel-control-next {
+            cursor: url("cursor.png"), auto;
+            background-color: none;
+        }
+
+        .valida {
+            width: 100%;
+        }
+
+        .txtvalida {
+            font-size: 82px;
+            font-weight: bold;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            line-height: 70px;
+        }
+
+        .txtgub {
+            font-size: 82px;
+            font-weight: bold;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            line-height: 70px;
+        }
+
+        .textos {
+            font-size: 20px;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            margin-top: 110px;
+            line-height: 20px;
+        }
+
+        #info {
+            font-size: 16px;
+            color: #141414;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            background-color: #F5F5F5;
+            margin-top: 190px;
+            width: 180px;
+            border-radius: 34px;
+            padding: 5px;
+        }
+
+        #info:hover {
+            background-color: #07D903 !important;
+
+        }
+
+
+        .seccio {
+            font-size: 15px;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            margin-top: -120px;
+            line-height: 15px;
+
+        }
+
+        .modal-content {
+            background-color: #141414 !important;
+            color: #F5F5F5;
+            padding: 10px;
+            text-align: center;
+            border: solid 1px #07D903 !important;
+        }
+
+        .fa.fa-envelope.mt-4.fa-2x{
+            color:#F5F5F5 !important;
+        }
+        .fa.fa-phone.mt-4.fa-2x{
+            color:#F5F5F5 !important;
+        }
+
+        .fa.fa-envelope.mt-4.fa-2x:hover,
+        .fa.fa-envelope.mt-4.fa-2x:after {
+            color: #07D903 !important;
+        }
+
+        .fa.fa-phone.mt-4.fa-2x:hover,
+        .fa.fa-phone.mt-4.fa-2x:after {
+            color: #07D903 !important;
+        }
+
+        .contacte{
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 2%;
+        }
+        .phonemail{
+            color:#F5F5F5;
+            font-size: 15px;
+        }
+        .phonemail:hover{
+            color:#07D903;
+        }
+        .tanca {
+            position:absolute;
+            font-size: 30px;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #F5F5F5 !important;
+            right: 2%;
+            cursor: url("cursor.png"), auto;
+        }
+
+        .tanca:hover,
+        .tanca:active {
+            color:#07D903 !important;
+        
+        }
+
+        @media (max-width: 600px) {
+            #projectes {
+                font-size: 45px;
+            }
+
+            #sobremi {
+                font-size: 45px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="logo.png" data-toggle="modal" data-target="#exampleModalCenter">
+        <a class="button" id="home" href="index.html">☰</a>
+    </div>
+    <div class="menu">
+
+        <a class="button" id="projectes" href="projectes.html">PROJECTES</a><br>
+        <a class="button" id="sobremi" href="about.html">SOBRE MI</a>
+
+    </div>
+
+    <!--Modal-->
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            
+            <div class="modal-content">
+                <button type="button" class="tanca" data-dismiss="modal">×</button>
+                    <p class="contacte">Contacte</p> <br>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="mailto:marcrb3@gmail.com"><i class="fa fa-envelope mt-4 fa-2x"></i></a>
+                                <p class="phonemail">marcrb3@gmail.com</p>
+                            </li>
+                            <br>
+                            <li><a href="tel:+34661064666"><i class="fa fa-phone mt-4 fa-2x"></i></a>
+                                <p class="phonemail">661 064 666</p>
+                            </li>
+                        </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
