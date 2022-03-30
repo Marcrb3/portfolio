@@ -27,6 +27,7 @@
             background: #141414;
             font-family: Arial, Helvetica, sans-serif;
             cursor: url("cursor.png"), auto;
+            overflow: hidden;
         }
 
         a {
@@ -116,12 +117,23 @@
         .carousel-control-next {
             cursor: url("c_dret.png"), auto;
             background-image: none;
+            
         }
-
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover{
+            opacity: 0;
+        }
+        
         .valida {
             width: 100%;
+            -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+                /* you can change the value also */
+                -webkit-transform-origin: center;
+                transform-origin: center;
         }
 
+    
         .txtvalida {
             font-size: 82px;
             font-weight: bold;
@@ -133,7 +145,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             width: fit-content;
-            line-height: 70px;
+            line-height:92%;
         }
 
         .txtgub {
@@ -147,7 +159,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             width: fit-content;
-            line-height: 70px;
+            line-height:92%;
         }
 
         .textos {
@@ -319,12 +331,14 @@
 </head>
 
 <body>
+
+
     <div class="header">
-        <img class="logo" src="logo.png" data-toggle="modal" data-target="#exampleModalCenter">
+        <img class="logo" src="logo.png">
         <a class="button" id="home" href="index.html">☰</a>
     </div>
     <div class="menu">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="valida" src="val.png">
@@ -362,26 +376,9 @@
 
 
     </div>
-    <!--Modal-->
-
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-
-            <div class="modal-content">
-                <button type="button" class="tanca" data-dismiss="modal">×</button>
-                <p class="contacte">Contacte</p> <br>
-                <ul class="list-unstyled mb-0">
-                    <li><a href="mailto:marcrb3@gmail.com"><i class="fa fa-envelope mt-4 fa-2x"></i></a>
-                        <p class="phonemail">marcrb3@gmail.com</p>
-                    </li>
-                    <br>
-                    <li><a href="tel:+34661064666"><i class="fa fa-phone mt-4 fa-2x"></i></a>
-                        <p class="phonemail">661 064 666</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    
+    
+    
 
 </body>
 

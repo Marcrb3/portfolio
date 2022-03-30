@@ -26,6 +26,7 @@
             background: #141414;
             font-family: Arial, Helvetica, sans-serif;
             cursor: url("cursor.png"), auto;
+            overflow-x: hidden;
         }
 
         a {
@@ -64,16 +65,11 @@
 
         .menu {
             position: absolute;
-            left: 50%;
-            -webkit-transform: translate(0, -50%);
-            transform: translate(-50%, 0);
             text-align: center;
-            width: fit-content;
-            line-height: 55px;
-            width: 600px;
+            width: 100%;
             margin-top: 10%;
         }
-       
+
 
         #home:hover {
             color: #F5F5F5;
@@ -167,11 +163,11 @@
         #info {
             font-size: 15px;
             color: #141414;
-            position: absolute;            
+            position: absolute;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            text-align: center; 
+            text-align: center;
             background-color: #F5F5F5;
             margin-top: 20px;
             margin-bottom: 80px;
@@ -179,11 +175,13 @@
             height: 50px;
             border-radius: 34px;
             cursor: url("cursor.png"), auto;
+            padding-top: 15px;
+
         }
 
         #info:hover {
             background-color: #07D903 !important;
-            color:#F5F5F5 !important;
+            color: #F5F5F5 !important;
         }
 
         .seccio {
@@ -202,29 +200,38 @@
 
         .about {
             color: #F5F5F5;
-            font-size: 60px;
+            font-size: 70px;
             margin-bottom: 50px;
             font-weight: bold;
+            text-align: center;
+            width: 600px;
+            margin: auto;
+            line-height: 94%;
         }
 
         .smi {
             font-size: 15px;
             color: #F5F5F5;
-            margin-bottom: 10%;
+            margin-bottom: 7%;
         }
-        .footer{
-            position:fixed;
-            color:#F5F5F5;
-            font-size: 15px;
-            width: 100%;
-            bottom:0;
-            text-align:center;
-            background-color: #141414;  
+
+        .footer {
+            bottom: 0;
+            height: 400px;
+            left: 0;
+            position: relative;
+            right: 0;
+            color: #141414;
+            font-size: 12px;
+            text-align: center;
+            background-color: #07D903;
+            margin-top: 10%;
         }
-        .cv{
-            color:#F5F5F5;
+
+        .cv {
+            color: #F5F5F5;
             font-size: 15px;
-            margin-top: 25px;
+            margin-top: 10%;
         }
 
         .modal-content {
@@ -235,11 +242,12 @@
             border: solid 1px #07D903 !important;
         }
 
-        .fa.fa-envelope.mt-4.fa-2x{
-            color:#F5F5F5 !important;
+        .fa.fa-envelope.mt-4.fa-2x {
+            color: #F5F5F5 !important;
         }
-        .fa.fa-phone.mt-4.fa-2x{
-            color:#F5F5F5 !important;
+
+        .fa.fa-phone.mt-4.fa-2x {
+            color: #F5F5F5 !important;
         }
 
         .fa.fa-envelope.mt-4.fa-2x:hover,
@@ -252,20 +260,23 @@
             color: #07D903 !important;
         }
 
-        .contacte{
+        .contacte {
             font-size: 20px;
             font-weight: bold;
             margin-top: 2%;
         }
-        .phonemail{
-            color:#F5F5F5;
+
+        .phonemail {
+            color: #F5F5F5;
             font-size: 15px;
         }
-        .phonemail:hover{
-            color:#07D903;
+
+        .phonemail:hover {
+            color: #07D903;
         }
+
         .tanca {
-            position:absolute;
+            position: absolute;
             font-size: 30px;
             font-weight: bold;
             background: none;
@@ -277,13 +288,13 @@
 
         .tanca:hover,
         .tanca:active {
-            color:#07D903 !important;
-        
+            color: #07D903 !important;
+
         }
 
         ::-webkit-scrollbar {
             width: 3px;
-           
+
         }
 
         /* Track */
@@ -303,66 +314,129 @@
             background: #07D903;
         }
 
-        @media (max-width: 600px) {
+        .marc {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            
+        }
+
+        .col-sm {
+            margin-top: 150px;
+        }
+
+        .cont {
+            height: 40px;
+            cursor: url("cursor.png"), auto;
+        }
+
+        .context {
+            font-size: 15px;
+            margin-top: 8px;
+            color: #141414 !important;
+        }
+
+        .context:hover,
+        .context:active {
+            color: #F5F5F5 !important;
+            cursor: url("cursor.png"), auto;
+        }
+
+        @media (max-width: 800px) {
             .about {
                 font-size: 35px;
             }
-            .menu{
-                width: 85%;
-                line-height:35px;
+
+            .menu {
+                width: 100%;
+                line-height: 35px;
             }
 
+            .about {
+                width: 80%;
+                font-size: 35px;
+                line-height: 85%;
+            }
+
+            .footer{
+                height: fit-content;
+            }
+            .col-sm{
+                margin-top: 50px;
+            }
+            .marc{
+                position:relative;
+                margin-top: 50px; 
+                color: #F5F5F5;
+                background-color: #141414;            
+            }
         }
     </style>
 </head>
 
 <body>
+    <script>
+        scrollDown = function () {
+            const scrollingElement = (document.scrollingElement || document.body);
+            scrollingElement.scrollTop = scrollingElement.scrollHeight;
+        }
+    </script>
+
     <div class="header">
-        <img class="logo" src="logo.png" data-toggle="modal" data-target="#exampleModalCenter">
+        <img class="logo" src="logo.png" onclick="scrollDown()">
         <a class="button" id="home" href="index.html">☰</a>
     </div>
     <div class="menu">
         <p class="smi">Sobre mi</p>
         <p class="about">
 
-            EL <span style="color:#07D903">MÓN</span> QUE ENS ENVOLTA ÉS DINÀMIC, HETEROGENI I COMPLEX. ESTÀ CONDICIONAT PER UNA INFINITAT DE LLEIS
-            FÍSIQUES I <span style="color:#07D903">VARIABLES TERRITORIALS</span> QUE LI ATORGUEN FORMA, SENTIT I SINGULARITAT.
-            EN AQUEST CONTEXT, LA <span style="color:#07D903">GEOGRAFIA</span> ENTRA EN JOC COM UNA CIÈNCIA MULTIDISCIPLINAR I TRANSVERSAL, CAPAÇ DE
-            QUALIFICAR, QUANTIFICAR I RELACIONAR TOTES AQUESTES LLEIS I VARIABLES SOBRE EL <span style="color:#07D903">TERRITORI</span>, AMB L'OBJECTIU
+            EL <span style="color:#07D903">MÓN</span> <br> QUE ENS ENVOLTA ÉS DINÀMIC, HETEROGENI I COMPLEX. ESTÀ
+            CONDICIONAT PER UNA INFINITAT DE LLEIS
+            FÍSIQUES I VARIABLES TERRITORIALS QUE LI ATORGUEN FORMA, SENTIT I
+            SINGULARITAT.
+            EN AQUEST CONTEXT, LA <span style="color:#07D903">GEOGRAFIA</span> ENTRA EN JOC COM UNA CIÈNCIA
+            MULTIDISCIPLINAR I TRANSVERSAL, CAPAÇ DE
+            QUALIFICAR, QUANTIFICAR I RELACIONAR TOTES AQUESTES LLEIS I VARIABLES SOBRE EL <span
+                style="color:#07D903">TERRITORI</span>, AMB L'OBJECTIU
             D'ENTENDRE'L I GESTIONAR-LO CORRECTAMENT.<br><br>
-            AMB LES <span style="color:#07D903">NOVES TECNOLOGIES</span> I ELS <span style="color:#07D903">SISTEMES D'INFORMACIÓ GEOGRÀFICA</span>, AVUI DIA ÉS
+            AMB LES <span style="color:#07D903">NOVES TECNOLOGIES</span> I ELS <span style="color:#07D903">SISTEMES
+                D'INFORMACIÓ GEOGRÀFICA</span>, AVUI DIA ÉS
             POSSIBLE ANALITZAR QUALSEVOL COSA QUE PASSA SOBRE UN LLOC DETERMINAT I EN UN PERÍODE CONCRET.<br><br>
-            EL <span style="color:#07D903">MAPA</span> ÉS EL RESULTAT PRINCIPAL DE LA GEOGRAFIA. ÉS UN <span style="color:#07D903">RECURS</span> PER REPRESENTAR INFORMACIÓ TENINT EN COMPTE
-            LA DISTRIBUCIÓ O COMPONENT ESPACIAL D'AQUESTA. ES UNA <span style="color:#07D903">FINESTRA OBERTA</span> AMB <span style="color:#07D903">POSSIBILITATS IL·LIMITADES.</span><br>
+            EL <span style="color:#07D903">MAPA</span> ÉS EL RESULTAT PRINCIPAL DE LA GEOGRAFIA. ÉS UN <span
+                style="color:#07D903">RECURS</span> PER REPRESENTAR INFORMACIÓ TENINT EN COMPTE
+            LA DISTRIBUCIÓ O COMPONENT ESPACIAL D'AQUESTA. ÉS UNA <span style="color:#07D903">FINESTRA OBERTA</span>
+            AMB <span style="color:#07D903">POSSIBILITATS IL·LIMITADES.</span><br>
             ELS MAPES SERVEIXEN PER MOSTRAR I ESTUDIAR, PERÒ SOBRETOT PER <span style="color:#07D903">EXPLICAR.</span>
         </p>
-        <p class="cv">↓ Descarrega el meu CV aquí ↓</p>
+        <p class="cv">Descarrega el meu CV aquí</p>
         <a class="button" id="info" href="CVMR.pdf" download="CV Marc Roca" target="_blank">CV</a><br><br><br>
-    </div>
-<div class="footer">
-    Marc Roca Ballesteros - 2022 ©
-</div>
-
- <!--Modal-->
-
- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        
-        <div class="modal-content">
-            <button type="button" class="tanca" data-dismiss="modal">×</button>
-                <p class="contacte">Contacte</p> <br>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="mailto:marcrb3@gmail.com"><i class="fa fa-envelope mt-4 fa-2x"></i></a>
-                            <p class="phonemail">marcrb3@gmail.com</p>
-                        </li>
-                        <br>
-                        <li><a href="tel:+34661064666"><i class="fa fa-phone mt-4 fa-2x"></i></a>
-                            <p class="phonemail">661 064 666</p>
-                        </li>
-                    </ul>
+        <div class="footer">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="mailto:marcrb3@gmail.com">
+                        <img class="cont" src="mail.png">
+                        <p class="context">marcrb3@gmail.com</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <a href="tel:+34661064666">
+                        <img src="phone.png" class="cont">
+                        <p class="context">661 064 666</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <a href="https://www.linkedin.com/in/marc-roca-ballesteros-9b291417a" target="_blank">
+                        <img src="linkedin.png" class="cont">
+                        <p class="context">Marc Roca Ballesteros</p>
+                    </a>
+                </div>
+            </div>
+            <p class="marc">Marc Roca Ballesteros - 2022 ©</p>
         </div>
+
     </div>
-</div>
+
 </body>
 
 </html>
