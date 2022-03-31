@@ -176,7 +176,7 @@
             border-radius: 34px;
             cursor: url("cursor.png"), auto;
             padding-top: 15px;
-            
+
         }
 
         #info:hover {
@@ -208,6 +208,7 @@
             margin: auto;
             line-height: 94%;
         }
+
         .petit {
             color: #F5F5F5;
             font-size: 15px;
@@ -328,7 +329,7 @@
             bottom: 0;
             right: 0;
             left: 0;
-            
+
         }
 
         .col-sm {
@@ -351,7 +352,9 @@
             color: #F5F5F5 !important;
             cursor: url("cursor.png"), auto;
         }
-
+        
+        
+       
         @media (max-width: 800px) {
             .about {
                 font-size: 35px;
@@ -368,25 +371,29 @@
                 line-height: 85%;
             }
 
-            .footer{
+            .footer {
                 height: fit-content;
             }
-            .col-sm{
+
+            .col-sm {
                 margin-top: 50px;
             }
-            .marc{
-                position:relative;
-                margin-top: 50px; 
+
+            .marc {
+                position: relative;
+                margin-top: 50px;
                 color: #F5F5F5;
-                background-color: #141414;            
+                background-color: #141414;
             }
-            .petit{
+
+            .petit {
                 width: 80%;
                 text-align: center;
             }
-            #info{
-            padding:0;
-            
+
+            #info {
+                padding: 0;
+
             }
         }
     </style>
@@ -397,11 +404,15 @@
         scrollDown = function () {
             const scrollingElement = (document.scrollingElement || document.body);
             scrollingElement.scrollTop = scrollingElement.scrollHeight;
-        }
+            
+        };
+
+  
+
     </script>
 
     <div class="header">
-        <img class="logo" src="logo.png" onclick="scrollDown()">
+        <img class="logo" src="logo.png" id="scroll" onclick="scrollDown()">
         <a class="button" id="home" href="index.html">☰</a>
     </div>
     <div class="menu">
@@ -417,11 +428,13 @@
             QUALIFICAR, QUANTIFICAR I RELACIONAR TOTES AQUESTES LLEIS I VARIABLES SOBRE EL <span
                 style="color:#07D903">TERRITORI</span>, AMB L'OBJECTIU
             D'ENTENDRE'L I GESTIONAR-LO CORRECTAMENT.<br><br>
-           
+
         </p>
         <p class="petit">
-            Amb les noves tecnologies i els Sistemes d'Informació Geogràfica (GIS), avui dia és possible analitzar qualsevol cosa que passa sobre un lloc determinat i en un període concret.
-            El mapa és el resultat principal de la geografia. És un recurs per representar informació tenint en compte la distribució o component espacial d'aquesta. És una finestra oberta
+            Amb les noves tecnologies i els Sistemes d'Informació Geogràfica (GIS), avui dia és possible analitzar
+            qualsevol cosa que passa sobre un lloc determinat i en un període concret.
+            El mapa és el resultat principal de la geografia. És un recurs per representar informació tenint en compte
+            la distribució o component espacial d'aquesta. És una finestra oberta
             amb possibilitats il·limitades. Els mapes serveixen per mostrar i estudiar, però sobretot per explicar.
         </p>
         <p class="cv">Descarrega el meu CV aquí</p>

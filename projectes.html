@@ -238,11 +238,39 @@
         }
 
         .modal-content {
-            background-color: #141414 !important;
+            background-color: #07D903 !important;
             color: #F5F5F5;
-            padding: 10px;
+            padding: 40px;
             text-align: center;
-            border: solid 1px #07D903 !important;
+
+        }
+
+        .modal {
+            position: fixed;
+            top: auto;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        .context {
+            font-size: 15px;
+            margin-top: 8px;
+            color: #141414 !important;
+        }
+
+        .context:hover,
+        .context:active {
+            color: #F5F5F5 !important;
+            cursor: url("cursor.png"), auto;
+        }
+        .col-sm {
+            margin-top: 15px;
+        }
+
+        .cont {
+            height: 40px;
+            cursor: url("cursor.png"), auto;
         }
 
         .fa.fa-envelope.mt-4.fa-2x {
@@ -295,6 +323,30 @@
 
         }
 
+        .footer {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            color: #F5F5F5;
+            font-size: 12px;
+            text-align: center;
+            background: none;
+            margin-top: 10%;
+        }
+        .close{
+            color:#141414;
+            position:absolute;
+            top:10px;
+            right:10px;
+            cursor: url("cursor.png"), auto;
+        }
+        .close:hover{
+            color:#F5F5F5 !important;
+            cursor: url("cursor.png"), auto !important;
+        }
+        
+
         @media (max-width: 600px) {
             .txtgub {
                 font-size: 35px;
@@ -338,7 +390,7 @@
 
 
     <div class="header">
-        <img class="logo" src="logo.png">
+        <img class="logo" src="logo.png" data-toggle="modal" data-target=".bd-example-modal-lg">
         <a class="button" id="home" href="index.html">☰</a>
     </div>
     <div class="menu">
@@ -381,8 +433,38 @@
 
     </div>
     
-    
-    
+    <div class="footer" data-toggle="modal" data-target=".bd-example-modal-lg">Marc Roca Ballesteros - 2022 ©</div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                <div class="row">
+                    <div class="col-sm">
+                        <a href="mailto:marcrb3@gmail.com">
+                            <img class="cont" src="mail.png">
+                            <p class="context">marcrb3@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="tel:+34661064666">
+                            <img src="phone.png" class="cont">
+                            <p class="context">661 064 666</p>
+                        </a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="https://www.linkedin.com/in/marc-roca-ballesteros-9b291417a" target="_blank">
+                            <img src="linkedin.png" class="cont">
+                            <p class="context">Marc Roca Ballesteros</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
