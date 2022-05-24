@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marc Roca
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: #141414;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: url("cursor.png"), auto;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .button:hover,
+        .button:focus {
+            outline: none;
+        }
+
+        .logo {
+            position: fixed;
+            color: #07D903;
+            float: left;
+            font-weight: bolder;
+            margin-top: 10px;
+            left: 25px;
+            height: 26px;
+            z-index: 100000
+        }
+
+        #home {
+            position: fixed;
+            color: #07D903;
+            float: right;
+            font-weight: bolder;
+            top: 5px;
+            right: 25px;
+            background-color: none;
+            border: none;
+            font-size: 30px;
+            cursor: url("cursor.png"), auto;
+            z-index: 100000
+        }
+
+        .menu {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            margin-top: 10%;
+        }
+
+
+        #home:hover {
+            color: #F5F5F5;
+            cursor: url("cursor.png"), auto;
+        }
+
+        #projectes {
+            color: #F5F5F5;
+            font-size: 4vw;
+            background: none;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #projectes:hover {
+            color: #07D903;
+            cursor: url("cursor.png"), auto;
+        }
+
+        #sobremi {
+            color: #F5F5F5;
+            font-size: 4vw;
+            background: none;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #sobremi:hover {
+            color: #07D903;
+            cursor: url("cursor.png"), auto;
+        }
+
+        .carousel-control-prev {
+            cursor: url("cursor.png"), auto;
+            background: none;
+        }
+
+        .carousel-control-next {
+            cursor: url("cursor.png"), auto;
+            background-color: none;
+        }
+
+        .valida {
+            width: 100%;
+        }
+
+        .txtvalida {
+            font-size: 82px;
+            font-weight: bold;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            line-height: 70px;
+        }
+
+        .txtgub {
+            font-size: 82px;
+            font-weight: bold;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            line-height: 70px;
+        }
+
+        .textos {
+            font-size: 20px;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            margin-top: 110px;
+            line-height: 20px;
+        }
+
+        #info {
+            font-size: 15px;
+            color: #141414;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #F5F5F5;
+            margin-top: 20px;
+            margin-bottom: 80px;
+            width: 150px;
+            height: 50px;
+            border-radius: 34px;
+            cursor: url("cursor.png"), auto;
+            padding-top: 15px;
+
+        }
+
+        #info:hover {
+            background-color: #07D903 !important;
+            color: #F5F5F5 !important;
+        }
+
+        .seccio {
+            font-size: 15px;
+            color: #F5F5F5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: fit-content;
+            margin-top: -120px;
+            line-height: 15px;
+        }
+
+        .about {
+            color: #F5F5F5;
+            font-size: 70px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            width: 600px;
+            margin: auto;
+            line-height: 94%;
+        }
+
+        .petit {
+            color: #F5F5F5;
+            font-size: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 600px;
+            margin: auto;
+            line-height: 115%;
+        }
+
+        .smi {
+            font-size: 12px;
+            color: #F5F5F5;
+            margin-bottom: 7%;
+        }
+
+        .footer {
+            bottom: 0;
+            height: 400px;
+            left: 0;
+            position: relative;
+            right: 0;
+            color: #141414;
+            font-size: 12px;
+            text-align: center;
+            background-color: #07D903;
+            margin-top: 10%;
+        }
+
+        .cv {
+            color: #F5F5F5;
+            font-size: 15px;
+            margin-top: 10%;
+        }
+
+        .modal-content {
+            background-color: #141414 !important;
+            color: #F5F5F5;
+            padding: 10px;
+            text-align: center;
+            border: solid 1px #07D903 !important;
+        }
+
+        .fa.fa-envelope.mt-4.fa-2x {
+            color: #F5F5F5 !important;
+        }
+
+        .fa.fa-phone.mt-4.fa-2x {
+            color: #F5F5F5 !important;
+        }
+
+        .fa.fa-envelope.mt-4.fa-2x:hover,
+        .fa.fa-envelope.mt-4.fa-2x:after {
+            color: #07D903 !important;
+        }
+
+        .fa.fa-phone.mt-4.fa-2x:hover,
+        .fa.fa-phone.mt-4.fa-2x:after {
+            color: #07D903 !important;
+        }
+
+        .contacte {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 2%;
+        }
+
+        .phonemail {
+            color: #F5F5F5;
+            font-size: 15px;
+        }
+
+        .phonemail:hover {
+            color: #07D903;
+        }
+
+        .tanca {
+            position: absolute;
+            font-size: 30px;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #F5F5F5 !important;
+            right: 2%;
+            cursor: url("cursor.png"), auto;
+        }
+
+        .tanca:hover,
+        .tanca:active {
+            color: #07D903 !important;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 0 black;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: white;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #07D903;
+        }
+
+        .marc {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+        }
+
+        .col-sm {
+            margin-top: 150px;
+        }
+
+        .cont {
+            height: 40px;
+            cursor: url("cursor.png"), auto;
+        }
+
+        .context {
+            font-size: 15px;
+            margin-top: 8px;
+            color: #141414 !important;
+        }
+
+        .context:hover,
+        .context:active {
+            color: #F5F5F5 !important;
+            cursor: url("cursor.png"), auto;
+        }
+        
+        
+       
+        @media (max-width: 800px) {
+            .about {
+                font-size: 35px;
+            }
+
+            .menu {
+                width: 100%;
+                line-height: 35px;
+            }
+
+            .about {
+                width: 80%;
+                font-size: 35px;
+                line-height: 85%;
+            }
+
+            .footer {
+                height: fit-content;
+            }
+
+            .col-sm {
+                margin-top: 50px;
+            }
+
+            .marc {
+                position: relative;
+                margin-top: 50px;
+                color: #F5F5F5;
+                background-color: #141414;
+            }
+
+            .petit {
+                width: 80%;
+                text-align: center;
+            }
+
+            #info {
+                padding: 0;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        scrollDown = function () {
+            const scrollingElement = (document.scrollingElement || document.body);
+            scrollingElement.scrollTop = scrollingElement.scrollHeight;
+            
+        };
+
+  
+
+    </script>
+
+    <div class="header">
+        <img class="logo" src="logo.png" id="scroll" onclick="scrollDown()">
+        <a class="button" id="home" href="index_es.html">☰</a>
+    </div>
+    <div class="menu">
+        <p class="smi">Sobre mí</p>
+        <p class="about">
+
+            EL <span style="color:#07D903">MUNDO</span> <br> QUE NOS RODEA ES DINÁMICO, HETEROGÉNEO Y COMPLEJO. ESTÁ
+            CONDICIONADO POR UNA INFINIDAD DE LEYES
+            FÍSICAS Y VARIABLES TERRITORIALES QUE LE OTORGAN FORMA, SENTIDO Y
+            SINGULARIDAD.
+            EN ESTE CONTEXTO, LA <span style="color:#07D903">GEOGRAFÍA</span> ENTRA EN JUEGO COMO UNA CIENCIA
+            MULTIDISCIPLINAR Y TRANSVERSAL, CAPAZ DE
+            CUALIFICAR, CUANTIFICAR Y RELACIONAR DICHAS LEYES Y VARIABLES SOBRE EL <span
+                style="color:#07D903">TERRITORIO</span>, CON EL OBJETIVO
+            DE ENTENDERLO Y GESTIONARLO CORRECTAMENTE.<br><br>
+
+        </p>
+        <p class="petit">
+            Con las nuevas tecnologías y los Sistemas de Información Geográfica (GIS), hoy en día es posible analizar cualquier cosa que ocurre en un sitio y en un período determinados.
+            El mapa es el resultado y herramienta principal de la geografía. Es un recurso para representar información teniendo en cuenta la distribución o componente espacial de ésta.
+            Es una ventana abierta con posibilidades ilimitadas. Los mapas sirven para mostrar y estudiar, pero sobretodo para explicar.
+        </p>
+        <p class="cv">Descarga mi CV aquí</p>
+        <a class="button" id="info" href="CVMR.pdf" download="CV Marc Roca" target="_blank">CV</a><br><br><br>
+        <div class="footer">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="mailto:marcrb3@gmail.com">
+                        <img class="cont" src="mail.png">
+                        <p class="context">marcrb3@gmail.com</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <a href="tel:+34661064666">
+                        <img src="phone.png" class="cont">
+                        <p class="context">661 064 666</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <a href="https://www.linkedin.com/in/marc-roca-ballesteros-9b291417a" target="_blank">
+                        <img src="linkedin.png" class="cont">
+                        <p class="context">Marc Roca Ballesteros</p>
+                    </a>
+                </div>
+            </div>
+            <p class="marc">Marc Roca Ballesteros - 2022 ©</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
